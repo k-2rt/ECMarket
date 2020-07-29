@@ -3,16 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1F25720324CE861C00D49EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25720224CE861C00D49EAE /* AppDelegate.swift */; };
 		1F25720524CE861C00D49EAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25720424CE861C00D49EAE /* SceneDelegate.swift */; };
-		1F25720724CE861C00D49EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25720624CE861C00D49EAE /* ViewController.swift */; };
 		1F25720A24CE861C00D49EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F25720824CE861C00D49EAE /* Main.storyboard */; };
 		1F25720C24CE861D00D49EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F25720B24CE861D00D49EAE /* Assets.xcassets */; };
 		1F25720F24CE861D00D49EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F25720D24CE861D00D49EAE /* LaunchScreen.storyboard */; };
+		1F25721724CF03DC00D49EAE /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25721624CF03DC00D49EAE /* CategoryCollectionViewController.swift */; };
+		1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25721824CF04AE00D49EAE /* CategoryCollectionViewCell.swift */; };
+		1F25721B24CF061A00D49EAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F25721A24CF061A00D49EAE /* GoogleService-Info.plist */; };
+		1F25721D24CF078F00D49EAE /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25721C24CF078F00D49EAE /* FirebaseCollectionReference.swift */; };
+		1F25722224CF16DB00D49EAE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722124CF16DB00D49EAE /* Category.swift */; };
+		1F25722524CF186800D49EAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722424CF186800D49EAE /* Constants.swift */; };
+		1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */; };
+		1F25722924D06B0D00D49EAE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722824D06B0D00D49EAE /* Item.swift */; };
+		1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722A24D0748F00D49EAE /* AddItemViewController.swift */; };
 		72F915E7AEC0F65FE2E07D97 /* Pods_ECMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +28,19 @@
 		1F2571FF24CE861C00D49EAE /* ECMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F25720224CE861C00D49EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F25720424CE861C00D49EAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F25720624CE861C00D49EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F25720924CE861C00D49EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F25720B24CE861D00D49EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F25720E24CE861D00D49EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F25721024CE861D00D49EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F25721624CF03DC00D49EAE /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		1F25721824CF04AE00D49EAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F25721A24CF061A00D49EAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F25721C24CF078F00D49EAE /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
+		1F25722124CF16DB00D49EAE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1F25722424CF186800D49EAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		1F25722824D06B0D00D49EAE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1F25722A24D0748F00D49EAE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D55932C6E1BE10C5DB029 /* Pods-ECMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.debug.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9AEC954B8E74028728BC9F /* Pods-ECMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.release.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,13 +81,53 @@
 			children = (
 				1F25720224CE861C00D49EAE /* AppDelegate.swift */,
 				1F25720424CE861C00D49EAE /* SceneDelegate.swift */,
-				1F25720624CE861C00D49EAE /* ViewController.swift */,
+				1F25721F24CF167400D49EAE /* Controllers */,
+				1F25722024CF169000D49EAE /* CustomCells */,
+				1F25722324CF16E200D49EAE /* Model */,
+				1F25721E24CF165C00D49EAE /* Helpers */,
 				1F25720824CE861C00D49EAE /* Main.storyboard */,
 				1F25720B24CE861D00D49EAE /* Assets.xcassets */,
 				1F25720D24CE861D00D49EAE /* LaunchScreen.storyboard */,
 				1F25721024CE861D00D49EAE /* Info.plist */,
+				1F25721A24CF061A00D49EAE /* GoogleService-Info.plist */,
 			);
 			path = ECMarket;
+			sourceTree = "<group>";
+		};
+		1F25721E24CF165C00D49EAE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F25721C24CF078F00D49EAE /* FirebaseCollectionReference.swift */,
+				1F25722424CF186800D49EAE /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1F25721F24CF167400D49EAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F25721624CF03DC00D49EAE /* CategoryCollectionViewController.swift */,
+				1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */,
+				1F25722A24D0748F00D49EAE /* AddItemViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1F25722024CF169000D49EAE /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				1F25721824CF04AE00D49EAE /* CategoryCollectionViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		1F25722324CF16E200D49EAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F25722124CF16DB00D49EAE /* Category.swift */,
+				1F25722824D06B0D00D49EAE /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3C763AB1E5C6DB1E074641DD /* Frameworks */ = {
@@ -88,7 +144,6 @@
 				694D55932C6E1BE10C5DB029 /* Pods-ECMarket.debug.xcconfig */,
 				DD9AEC954B8E74028728BC9F /* Pods-ECMarket.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +210,7 @@
 				1F25720F24CE861D00D49EAE /* LaunchScreen.storyboard in Resources */,
 				1F25720C24CE861D00D49EAE /* Assets.xcassets in Resources */,
 				1F25720A24CE861C00D49EAE /* Main.storyboard in Resources */,
+				1F25721B24CF061A00D49EAE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F25720724CE861C00D49EAE /* ViewController.swift in Sources */,
+				1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */,
+				1F25722924D06B0D00D49EAE /* Item.swift in Sources */,
 				1F25720324CE861C00D49EAE /* AppDelegate.swift in Sources */,
+				1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */,
+				1F25721D24CF078F00D49EAE /* FirebaseCollectionReference.swift in Sources */,
+				1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */,
 				1F25720524CE861C00D49EAE /* SceneDelegate.swift in Sources */,
+				1F25722524CF186800D49EAE /* Constants.swift in Sources */,
+				1F25721724CF03DC00D49EAE /* CategoryCollectionViewController.swift in Sources */,
+				1F25722224CF16DB00D49EAE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
