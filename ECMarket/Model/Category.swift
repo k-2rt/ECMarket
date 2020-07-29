@@ -35,8 +35,7 @@ func downloadCategoriesFromFirebase(completion: @escaping(_ categoryArray: [Cate
     
     FirebaseReference(.Category).getDocuments { (snapshot, error) in
         guard let snapshot = snapshot else {
-            completion(categoryArray)
-            return
+            return completion(categoryArray)
         }
         
         if !snapshot.isEmpty {
