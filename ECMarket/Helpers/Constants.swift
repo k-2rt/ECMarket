@@ -8,6 +8,10 @@
 
 import Foundation
 
+// IDS and Keys
+let filePath = ProcessInfo.processInfo.environment["StorageAPI"]!
+public let KFILEREFERENCE = filePath
+
 // Firebase Headers
 
 public let kUSER_PATH = "User"

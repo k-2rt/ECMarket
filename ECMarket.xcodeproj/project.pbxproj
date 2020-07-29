@@ -21,6 +21,8 @@
 		1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */; };
 		1F25722924D06B0D00D49EAE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722824D06B0D00D49EAE /* Item.swift */; };
 		1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722A24D0748F00D49EAE /* AddItemViewController.swift */; };
+		1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9B24D1BB280075F699 /* ReachAbility.swift */; };
+		1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9D24D1BB9A0075F699 /* Downloader.swift */; };
 		72F915E7AEC0F65FE2E07D97 /* Pods_ECMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		1F25722824D06B0D00D49EAE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1F25722A24D0748F00D49EAE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		1FC62F9B24D1BB280075F699 /* ReachAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
+		1FC62F9D24D1BB9A0075F699 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D55932C6E1BE10C5DB029 /* Pods-ECMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.debug.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9AEC954B8E74028728BC9F /* Pods-ECMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.release.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,9 +85,9 @@
 			children = (
 				1F25720224CE861C00D49EAE /* AppDelegate.swift */,
 				1F25720424CE861C00D49EAE /* SceneDelegate.swift */,
+				1F25722324CF16E200D49EAE /* Model */,
 				1F25721F24CF167400D49EAE /* Controllers */,
 				1F25722024CF169000D49EAE /* CustomCells */,
-				1F25722324CF16E200D49EAE /* Model */,
 				1F25721E24CF165C00D49EAE /* Helpers */,
 				1F25720824CE861C00D49EAE /* Main.storyboard */,
 				1F25720B24CE861D00D49EAE /* Assets.xcassets */,
@@ -99,6 +103,8 @@
 			children = (
 				1F25721C24CF078F00D49EAE /* FirebaseCollectionReference.swift */,
 				1F25722424CF186800D49EAE /* Constants.swift */,
+				1FC62F9B24D1BB280075F699 /* ReachAbility.swift */,
+				1FC62F9D24D1BB9A0075F699 /* Downloader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			files = (
 				1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */,
 				1F25722924D06B0D00D49EAE /* Item.swift in Sources */,
+				1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */,
 				1F25720324CE861C00D49EAE /* AppDelegate.swift in Sources */,
 				1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */,
 				1F25721D24CF078F00D49EAE /* FirebaseCollectionReference.swift in Sources */,
@@ -273,6 +280,7 @@
 				1F25722524CF186800D49EAE /* Constants.swift in Sources */,
 				1F25721724CF03DC00D49EAE /* CategoryCollectionViewController.swift in Sources */,
 				1F25722224CF16DB00D49EAE /* Category.swift in Sources */,
+				1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
