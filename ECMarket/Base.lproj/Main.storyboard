@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Mx9-20-2sD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="Mx9-20-2sD" customClass="ItemTableViewCell" customModule="ECMarket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mx9-20-2sD" id="Upe-6i-xgH">
@@ -155,6 +155,12 @@
                                         <constraint firstItem="TKk-85-EbL" firstAttribute="leading" secondItem="eE0-fX-wCy" secondAttribute="trailing" constant="11" id="k33-dS-uGM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="eE0-fX-wCy" id="bqv-2W-ToF"/>
+                                    <outlet property="itemImageView" destination="DG7-Ec-RhJ" id="uZ3-5z-913"/>
+                                    <outlet property="nameLabel" destination="4u4-zE-8La" id="yJY-VB-o2p"/>
+                                    <outlet property="priceLabel" destination="TKk-85-EbL" id="pT4-NB-4GW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
