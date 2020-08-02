@@ -22,6 +22,11 @@
 		1F25722924D06B0D00D49EAE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722824D06B0D00D49EAE /* Item.swift */; };
 		1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722A24D0748F00D49EAE /* AddItemViewController.swift */; };
 		1FB53A8C24D65E5C00D6E4CC /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */; };
+		1FB53A8E24D68BCB00D6E4CC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A8D24D68BCB00D6E4CC /* WelcomeViewController.swift */; };
+		1FB53A9024D6919500D6E4CC /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A8F24D6919500D6E4CC /* MUser.swift */; };
+		1FB53A9224D6C57500D6E4CC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9124D6C57500D6E4CC /* ProfileTableViewController.swift */; };
+		1FB53A9424D6F74700D6E4CC /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9324D6F74700D6E4CC /* FinishRegistrationViewController.swift */; };
+		1FB53A9824D70D7D00D6E4CC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9724D70D7D00D6E4CC /* EditProfileViewController.swift */; };
 		1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9B24D1BB280075F699 /* ReachAbility.swift */; };
 		1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9D24D1BB9A0075F699 /* Downloader.swift */; };
 		1FC62FA024D27D520075F699 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */; };
@@ -50,6 +55,11 @@
 		1F25722824D06B0D00D49EAE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1F25722A24D0748F00D49EAE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		1FB53A8D24D68BCB00D6E4CC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1FB53A8F24D6919500D6E4CC /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		1FB53A9124D6C57500D6E4CC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		1FB53A9324D6F74700D6E4CC /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		1FB53A9724D70D7D00D6E4CC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1FC62F9B24D1BB280075F699 /* ReachAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
 		1FC62F9D24D1BB9A0075F699 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +140,9 @@
 				1F25722A24D0748F00D49EAE /* AddItemViewController.swift */,
 				1FC62FA324D30D730075F699 /* ItemViewController.swift */,
 				1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */,
+				1FB53A9624D6F7BB00D6E4CC /* LoginView */,
+				1FB53A9124D6C57500D6E4CC /* ProfileTableViewController.swift */,
+				1FB53A9724D70D7D00D6E4CC /* EditProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,10 +161,20 @@
 			isa = PBXGroup;
 			children = (
 				1F25722124CF16DB00D49EAE /* Category.swift */,
+				1FB53A8F24D6919500D6E4CC /* MUser.swift */,
 				1F25722824D06B0D00D49EAE /* Item.swift */,
 				1FC62FA724D53F870075F699 /* Basket.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1FB53A9624D6F7BB00D6E4CC /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				1FB53A8D24D68BCB00D6E4CC /* WelcomeViewController.swift */,
+				1FB53A9324D6F74700D6E4CC /* FinishRegistrationViewController.swift */,
+			);
+			name = LoginView;
 			sourceTree = "<group>";
 		};
 		3C763AB1E5C6DB1E074641DD /* Frameworks */ = {
@@ -287,14 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB53A9224D6C57500D6E4CC /* ProfileTableViewController.swift in Sources */,
 				1FB53A8C24D65E5C00D6E4CC /* BasketViewController.swift in Sources */,
 				1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */,
 				1F25722924D06B0D00D49EAE /* Item.swift in Sources */,
+				1FB53A9424D6F74700D6E4CC /* FinishRegistrationViewController.swift in Sources */,
 				1FC62FA624D313EF0075F699 /* ImageCollectionViewCell.swift in Sources */,
 				1FC62FA424D30D730075F699 /* ItemViewController.swift in Sources */,
 				1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */,
 				1F25720324CE861C00D49EAE /* AppDelegate.swift in Sources */,
 				1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */,
+				1FB53A9824D70D7D00D6E4CC /* EditProfileViewController.swift in Sources */,
 				1F25721D24CF078F00D49EAE /* FirebaseCollectionReference.swift in Sources */,
 				1FC62FA824D53F870075F699 /* Basket.swift in Sources */,
 				1FC62FA024D27D520075F699 /* ItemTableViewCell.swift in Sources */,
@@ -305,6 +331,8 @@
 				1F25721724CF03DC00D49EAE /* CategoryCollectionViewController.swift in Sources */,
 				1F25722224CF16DB00D49EAE /* Category.swift in Sources */,
 				1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */,
+				1FB53A9024D6919500D6E4CC /* MUser.swift in Sources */,
+				1FB53A8E24D68BCB00D6E4CC /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
