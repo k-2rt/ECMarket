@@ -21,12 +21,14 @@
 		1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */; };
 		1F25722924D06B0D00D49EAE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722824D06B0D00D49EAE /* Item.swift */; };
 		1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25722A24D0748F00D49EAE /* AddItemViewController.swift */; };
+		1FB53A8C24D65E5C00D6E4CC /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */; };
 		1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9B24D1BB280075F699 /* ReachAbility.swift */; };
 		1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9D24D1BB9A0075F699 /* Downloader.swift */; };
 		1FC62FA024D27D520075F699 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */; };
 		1FC62FA224D2FCF90075F699 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62FA124D2FCF90075F699 /* HelperFunctions.swift */; };
 		1FC62FA424D30D730075F699 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62FA324D30D730075F699 /* ItemViewController.swift */; };
 		1FC62FA624D313EF0075F699 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62FA524D313EF0075F699 /* ImageCollectionViewCell.swift */; };
+		1FC62FA824D53F870075F699 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62FA724D53F870075F699 /* Basket.swift */; };
 		72F915E7AEC0F65FE2E07D97 /* Pods_ECMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,12 +49,14 @@
 		1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		1F25722824D06B0D00D49EAE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1F25722A24D0748F00D49EAE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		1FC62F9B24D1BB280075F699 /* ReachAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
 		1FC62F9D24D1BB9A0075F699 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		1FC62FA124D2FCF90075F699 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		1FC62FA324D30D730075F699 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		1FC62FA524D313EF0075F699 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FC62FA724D53F870075F699 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		57E146D70D06911ED41E29EE /* Pods_ECMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		694D55932C6E1BE10C5DB029 /* Pods-ECMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.debug.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9AEC954B8E74028728BC9F /* Pods-ECMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMarket.release.xcconfig"; path = "Target Support Files/Pods-ECMarket/Pods-ECMarket.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				1F25722624D0691A00D49EAE /* ItemsTableViewController.swift */,
 				1F25722A24D0748F00D49EAE /* AddItemViewController.swift */,
 				1FC62FA324D30D730075F699 /* ItemViewController.swift */,
+				1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			children = (
 				1F25722124CF16DB00D49EAE /* Category.swift */,
 				1F25722824D06B0D00D49EAE /* Item.swift */,
+				1FC62FA724D53F870075F699 /* Basket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB53A8C24D65E5C00D6E4CC /* BasketViewController.swift in Sources */,
 				1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */,
 				1F25722924D06B0D00D49EAE /* Item.swift in Sources */,
 				1FC62FA624D313EF0075F699 /* ImageCollectionViewCell.swift in Sources */,
@@ -289,6 +296,7 @@
 				1F25720324CE861C00D49EAE /* AppDelegate.swift in Sources */,
 				1F25722724D0691A00D49EAE /* ItemsTableViewController.swift in Sources */,
 				1F25721D24CF078F00D49EAE /* FirebaseCollectionReference.swift in Sources */,
+				1FC62FA824D53F870075F699 /* Basket.swift in Sources */,
 				1FC62FA024D27D520075F699 /* ItemTableViewCell.swift in Sources */,
 				1FC62FA224D2FCF90075F699 /* HelperFunctions.swift in Sources */,
 				1F25722B24D0748F00D49EAE /* AddItemViewController.swift in Sources */,
