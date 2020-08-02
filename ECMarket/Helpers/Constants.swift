@@ -9,6 +9,7 @@
 import Foundation
 
 // IDS and Keys
+
 let filePath = ProcessInfo.processInfo.environment["StorageAPI"]!
 public let KFILEREFERENCE = filePath
 
@@ -32,4 +33,8 @@ public let kDESCRIPTION = "description"
 public let kPRICE = "price"
 public let kIMAGELINKS = "imageLinks"
 
+// Basket
+
+public let kOWNERID = "ownerId"
+public let kITEMIDS = "itemIds"
 
