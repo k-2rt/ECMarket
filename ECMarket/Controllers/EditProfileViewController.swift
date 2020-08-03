@@ -24,19 +24,42 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        loadUserInfo()
     }
     
     // MARK: - IBActions
     
     
     @IBAction func saveBarButtonPressed(_ sender: Any) {
+        dismissKeyboard()
         
+        if textFieldsHaveText() {
+            let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!), kFULLADDRESS : addressTextField.text!]
+            updateCurrentUserInFirestore(withValues: withValues) { (error) in
+                if error == nil {
+                    self.hud.textLabel.text = "Updated!"
+                    self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    self.hud.show(in: self.view)
+                    self.hud.dismiss(afterDelay: 2.0)
+                } else {
+                    print("Error updating user ", error?.localizedDescription)
+                    self.hud.textLabel.text = error?.localizedDescription
+                    self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    self.hud.show(in: self.view)
+                    self.hud.dismiss(afterDelay: 2.0)
+                }
+            }
+        } else {
+            hud.textLabel.text = "All fields are required!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
     }
     
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
-        
+        logOutUser()
     }
     
     // MARK: - UpdateUI
@@ -50,4 +73,24 @@ class EditProfileViewController: UIViewController {
         }
     }
     
+    // MARK: - Helper functions
+    
+    private func dismissKeyboard() {
+        self.view.endEditing(false)
+    }
+    
+    private func textFieldsHaveText() -> Bool {
+        return (nameTextField.text != "" && surnameTextField.text != "" && addressTextField.text != "")
+    }
+    
+    private func logOutUser() {
+        MUser.logOutCurrentUser { (error) in
+            if error == nil {
+                print("Logged out")
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                print("Error login out ", error?.localizedDescription)
+            }
+        }
+    }
 }
