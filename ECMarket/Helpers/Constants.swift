@@ -10,7 +10,7 @@ import Foundation
 
 enum Constants {
     static let publishableKey = ProcessInfo.processInfo.environment["StripeAPI"]!
-    static let baseURLString = "http://localhost:3000/"
+    static let baseURLString = "https://ecmarket.herokuapp.com/"
     static let defaultCurrency = "jpy"
     static let defaultDescription = "Purchase from ECMarket"
 }
