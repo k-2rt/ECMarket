@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Constants {
+    static let publishableKey = ProcessInfo.processInfo.environment["StripeAPI"]!
+    static let baseURLString = "http://localhost:3000/"
+    static let defaultCurrency = "jpy"
+    static let defaultDescription = "Purchase from ECMarket"
+}
+
 // IDS and Keys
 
 let filePath = ProcessInfo.processInfo.environment["StorageAPI"]!

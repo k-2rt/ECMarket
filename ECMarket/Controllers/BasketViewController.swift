@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import Stripe
 
 class BasketViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class BasketViewController: UIViewController {
     var allItems: [Item] = []
     var purchasedItemIds: [String] =  []
     let hud = JGProgressHUD(style: .dark)
+    var totalPrice = 0
     
     // MARK: - Lifecycle
     
@@ -48,14 +50,9 @@ class BasketViewController: UIViewController {
     
     @IBAction func checkOutButtonPressed(_ sender: Any) {
         if MUser.currentUser()!.onBoard {
-            tempFunction()
-            addItemsToPurchaseHistory(self.purchasedItemIds)
-            emptyTheBasket()
+            self.showPaymentOptions()
         } else {
-            self.hud.textLabel.text = "Please complete your profile!"
-            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-            self.hud.show(in: self.view)
-            self.hud.dismiss(afterDelay: 2.0)
+            self.showNotification(text: "Please complete your profile!", isError: true)
         }
     }
     
@@ -79,12 +76,6 @@ class BasketViewController: UIViewController {
     }
     
     // MARK: - Helper functions
-    
-    func tempFunction() {
-        for item in allItems {
-            purchasedItemIds.append(item.id)
-        }
-    }
     
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
@@ -168,6 +159,54 @@ class BasketViewController: UIViewController {
             }
         }
     }
+    
+    private func finishPayment(token: STPToken) {
+        self.totalPrice = 0
+        for item in allItems {
+            purchasedItemIds.append(item.id)
+            self.totalPrice += Int(item.price)
+        }
+        
+        StripeClient.sharedClient.createAndConfirmPayment(token, amount: totalPrice) { (error) in
+            if error == nil {
+                self.emptyTheBasket()
+                self.addItemsToPurchaseHistory(self.purchasedItemIds)
+                self.showNotification(text: "Payment Successful", isError: false)
+            } else {
+                print(error!.localizedDescription)
+                self.showNotification(text: error!.localizedDescription, isError: true)
+            }
+        }
+    }
+    
+    private func showNotification(text: String, isError: Bool) {
+        if isError {
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        } else {
+            self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        }
+        
+        self.hud.textLabel.text = text
+        self.hud.show(in: self.view)
+        self.hud.dismiss(afterDelay: 2.0)
+    }
+    
+    private func showPaymentOptions() {
+        let alertController = UIAlertController(title: "Payment", message: "Choose prefered payment option", preferredStyle: .actionSheet)
+        let cardAction = UIAlertAction(title: "Pay with Card", style: .default) { (action) in
+            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "cardInfoVC") as! CardInfoViewController
+            
+            vc.delegate = self
+            
+            self.present(vc, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(cardAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
@@ -211,5 +250,14 @@ extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         shotItemView(withItem: allItems[indexPath.row])
     }
+}
+
+extension BasketViewController: CardInfoViewControllerDelegate {
+    func didClickDone(_ token: STPToken) {
+        finishPayment(token: token)
+    }
     
+    func didClickCancel() {
+        showNotification(text: "Payment Canceled", isError: true)
+    }
 }

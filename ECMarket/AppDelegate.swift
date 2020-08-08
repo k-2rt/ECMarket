@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        initializeStripe()
+        
         return true
     }
 
@@ -33,6 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // MARK: - Stripe Init
+    
+    func initializeStripe() {
+//        STPPaymentConfiguration.shared().publishableKey = Constants.publishableKey
+        STPAPIClient.shared().publishableKey = Constants.publishableKey
+        StripeClient.sharedClient.baseURLString = Constants.baseURLString
+    }
 
 }
 
