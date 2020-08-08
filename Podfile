@@ -14,7 +14,8 @@ pod 'InstantSearchClient'
 pod 'EmptyDataSet-Swift'
 pod 'NVActivityIndicatorView/AppExtension'
 pod 'JGProgressHUD'
-pod 'PayPal-iOS-SDK'
+pod 'Stripe'
+pod 'Alamofire', '~> 4.8'
 
   # Pods for ECMarket
 

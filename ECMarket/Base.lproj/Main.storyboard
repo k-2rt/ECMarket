@@ -181,6 +181,54 @@
             </objects>
             <point key="canvasLocation" x="2618.840579710145" y="1230.8035714285713"/>
         </scene>
+        <!--Card Info View Controller-->
+        <scene sceneID="hP8-hj-eBz">
+            <objects>
+                <viewController storyboardIdentifier="cardInfoVC" id="jdB-F2-XTW" customClass="CardInfoViewController" customModule="ECMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccq-Ba-Rof">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPB-KN-XYm">
+                                <rect key="frame" x="20" y="79" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2IS-9V-wr5"/>
+                                    <constraint firstAttribute="height" constant="30" id="E9t-Rb-rYK"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="jdB-F2-XTW" eventType="touchUpInside" id="I2y-aS-D2A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-cq-LXK">
+                                <rect key="frame" x="314" y="79" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ndh-wN-EfA"/>
+                                    <constraint firstAttribute="width" constant="80" id="zdN-UK-FUA"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="jdB-F2-XTW" eventType="touchUpInside" id="Phk-v3-aiv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dPB-KN-XYm" firstAttribute="top" secondItem="xk8-Gw-cGm" secondAttribute="top" constant="35" id="A7u-dU-22m"/>
+                            <constraint firstItem="dPB-KN-XYm" firstAttribute="leading" secondItem="xk8-Gw-cGm" secondAttribute="leading" constant="20" id="ABY-yl-Yqu"/>
+                            <constraint firstItem="xk8-Gw-cGm" firstAttribute="trailing" secondItem="w1d-cq-LXK" secondAttribute="trailing" constant="20" id="gZr-Fo-TOP"/>
+                            <constraint firstItem="w1d-cq-LXK" firstAttribute="top" secondItem="xk8-Gw-cGm" secondAttribute="top" constant="35" id="s1U-F9-Al0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xk8-Gw-cGm"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButtonOutlet" destination="w1d-cq-LXK" id="0Q0-Po-i78"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzo-vf-xGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3476.811594202899" y="508.92857142857139"/>
+        </scene>
         <!--Item View Controller-->
         <scene sceneID="Ur7-51-xpO">
             <objects>
