@@ -30,6 +30,8 @@
 		1FB53A9A24D83F1900D6E4CC /* PurchasedHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9924D83F1900D6E4CC /* PurchasedHistoryTableViewController.swift */; };
 		1FB53A9C24D9136B00D6E4CC /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9B24D9136B00D6E4CC /* StripeClient.swift */; };
 		1FB53A9E24D9956A00D6E4CC /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53A9D24D9956A00D6E4CC /* CardInfoViewController.swift */; };
+		1FC53E5224DE844D00440CBA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53E5124DE844D00440CBA /* SearchViewController.swift */; };
+		1FC53E5424DEF7A700440CBA /* AlgoliaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC53E5324DEF7A700440CBA /* AlgoliaService.swift */; };
 		1FC62F9C24D1BB280075F699 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9B24D1BB280075F699 /* ReachAbility.swift */; };
 		1FC62F9E24D1BB9A0075F699 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9D24D1BB9A0075F699 /* Downloader.swift */; };
 		1FC62FA024D27D520075F699 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		1FB53A9924D83F1900D6E4CC /* PurchasedHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryTableViewController.swift; sourceTree = "<group>"; };
 		1FB53A9B24D9136B00D6E4CC /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
 		1FB53A9D24D9956A00D6E4CC /* CardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
+		1FC53E5124DE844D00440CBA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1FC53E5324DEF7A700440CBA /* AlgoliaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaService.swift; sourceTree = "<group>"; };
 		1FC62F9B24D1BB280075F699 /* ReachAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
 		1FC62F9D24D1BB9A0075F699 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		1FC62F9F24D27D520075F699 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				1F25722A24D0748F00D49EAE /* AddItemViewController.swift */,
 				1FC62FA324D30D730075F699 /* ItemViewController.swift */,
 				1FB53A8B24D65E5C00D6E4CC /* BasketViewController.swift */,
+				1FC53E5124DE844D00440CBA /* SearchViewController.swift */,
 				1FB53A9624D6F7BB00D6E4CC /* LoginView */,
 				1FB53A9124D6C57500D6E4CC /* ProfileTableViewController.swift */,
 				1FB53A9724D70D7D00D6E4CC /* EditProfileViewController.swift */,
@@ -173,6 +178,7 @@
 				1F25722824D06B0D00D49EAE /* Item.swift */,
 				1FC62FA724D53F870075F699 /* Basket.swift */,
 				1FB53A9B24D9136B00D6E4CC /* StripeClient.swift */,
+				1FC53E5324DEF7A700440CBA /* AlgoliaService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,8 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB53A9224D6C57500D6E4CC /* ProfileTableViewController.swift in Sources */,
+				1FC53E5424DEF7A700440CBA /* AlgoliaService.swift in Sources */,
 				1FB53A8C24D65E5C00D6E4CC /* BasketViewController.swift in Sources */,
 				1F25721924CF04AE00D49EAE /* CategoryCollectionViewCell.swift in Sources */,
+				1FC53E5224DE844D00440CBA /* SearchViewController.swift in Sources */,
 				1FB53A9C24D9136B00D6E4CC /* StripeClient.swift in Sources */,
 				1F25722924D06B0D00D49EAE /* Item.swift in Sources */,
 				1FB53A9424D6F74700D6E4CC /* FinishRegistrationViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EmptyDataSet_Swift
 
 class ItemsTableViewController: UITableViewController {
 
@@ -22,6 +23,8 @@ class ItemsTableViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         self.title = category?.name
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,5 +79,18 @@ class ItemsTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+}
 
+extension ItemsTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString(string: "No items to display!")
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "emptyData")
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString(string: "Please check back later")
+    }
 }

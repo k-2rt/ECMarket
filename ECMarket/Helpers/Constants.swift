@@ -17,8 +17,11 @@ enum Constants {
 
 // IDS and Keys
 
-let filePath = ProcessInfo.processInfo.environment["StorageAPI"]!
-public let KFILEREFERENCE = filePath
+public let KFILEREFERENCE = ProcessInfo.processInfo.environment["StorageAPI"]!
+public let kALGOLIA_APP_ID = ProcessInfo.processInfo.environment["AlgoliaAppID"]!
+public let kALGOLIA_SEARCH_KEY = ProcessInfo.processInfo.environment["AlgoliaSearchKey"]!
+public let kALGOLIA_ADMIN_KEY = ProcessInfo.processInfo.environment["AlgoliaAdminKey"]!
+
 
 // Firebase Headers
 

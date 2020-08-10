@@ -116,7 +116,7 @@ class MUser {
             
             if error == nil {
                 authDataResult!.user.sendEmailVerification { (error) in
-                    print("Auth email verification error : ", error?.localizedDescription)
+                    print("Auth email verification error : ", error!.localizedDescription)
                 }
             }
         }

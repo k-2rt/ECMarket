@@ -79,10 +79,10 @@ class BasketViewController: UIViewController {
     
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
-            totalItemsLabel.text = "0"
+            totalItemsLabel.text = "0 個"
             basketTotalPriceLabel.text = returnBasketTotalPrice()
         } else {
-            totalItemsLabel.text = "\(allItems.count)"
+            totalItemsLabel.text = "\(allItems.count) 個"
             basketTotalPriceLabel.text = returnBasketTotalPrice()
         }
         
@@ -115,7 +115,7 @@ class BasketViewController: UIViewController {
         
         updateBasketInFirestore(basket!, withValues: [kITEMIDS : basket!.itemIds]) { (error) in
             if error != nil {
-                print("Error updating basket ", error?.localizedDescription)
+                print("Error updating basket ", error!.localizedDescription)
             }
             
             self.getBasketItems()
@@ -128,7 +128,7 @@ class BasketViewController: UIViewController {
             
             updateCurrentUserInFirestore(withValues: [kPURCHASEDITEMIDS : newItemIds]) { (error) in
                 if error != nil {
-                    print("Error adding purchased items ", error?.localizedDescription)
+                    print("Error adding purchased items ", error!.localizedDescription)
                 }
             }
         }
@@ -148,7 +148,7 @@ class BasketViewController: UIViewController {
     
     private func disableCheckoutButton() {
         checkOutButtonOutlet.isEnabled = false
-        checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
     }
     
     private func removeItemFromBasket(itemId: String) {
@@ -169,8 +169,8 @@ class BasketViewController: UIViewController {
         
         StripeClient.sharedClient.createAndConfirmPayment(token, amount: totalPrice) { (error) in
             if error == nil {
-                self.emptyTheBasket()
                 self.addItemsToPurchaseHistory(self.purchasedItemIds)
+                self.emptyTheBasket()
                 self.showNotification(text: "Payment Successful", isError: false)
             } else {
                 print(error!.localizedDescription)
